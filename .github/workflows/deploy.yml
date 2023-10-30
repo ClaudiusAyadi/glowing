@@ -23,5 +23,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           rm: true
-          source: "./dist/*"
+          source: dist/
+          strip_components: 1
           target: "${{ secrets.PATH }}"
