@@ -1,0 +1,42 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 146
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
+        run: pnpm build
+
+  deploy:
+    name: Deploy to cPanel
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Deploy to cPanel Server
+        run: |
+          echo "$SSH_PRIVATE_KEY" > ssh_key
+          chmod 600 ssh_key
+          ssh -i ssh_key adunx@business107.web-hosting.com "mkdir -p /home/adunx/glowing.adun.studio"
+          scp -i ssh_key -r dist/* uadunx@business107.web-hosting.com:/home/adunx/glowing.adun.studio
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
