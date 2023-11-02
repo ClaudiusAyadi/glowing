@@ -15,16 +15,15 @@
 		z-index: 5;
 		visibility: hidden;
 		transform: translateX(-100%);
-		transition: var(--transition-all);
+		transition: var(--all);
 
 		&[aria-expanded="true"] {
-			--property: transform;
 			--duration: 400ms;
 			--function: var(--cubic-out);
 
 			visibility: visible;
 			transform: translateX(0);
-			transition: var(--transition-all);
+			transition: var(--all);
 		}
 
 		.wrapper {
@@ -48,7 +47,7 @@
 			font-weight: var(--w-600);
 			letter-spacing: 1px;
 			padding-block: 0.3125rem;
-			transition: var(--transition);
+			transition: var(--normal);
 
 			&:is(:hover, :focus) {
 				color: var(--base-medium);
@@ -60,18 +59,23 @@
 		--duration: 250ms;
 		--bg: var(--black-trans-5);
 
+		border: 0;
+		inline-size: 100%;
+		block-size: 100%;
 		position: fixed;
 		inset: 0;
 		visibility: hidden;
 		z-index: 4;
 		pointer-events: none;
-		transition: var(--transition);
+		transition: var(--all);
 
 		&[aria-expanded="true"] {
+			--duration: 400ms;
+
 			background-color: var(--bg);
 			visibility: visible;
 			pointer-events: all;
-			transition: var(--transition);
+			transition: var(--all);
 		}
 	}
 }

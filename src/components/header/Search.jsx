@@ -1,4 +1,4 @@
-export default function Search() {
+function Search() {
 	return (
 		<form>
 			<input
@@ -17,3 +17,5 @@ export default function Search() {
 		</form>
 	);
 }
+
+export default Search;

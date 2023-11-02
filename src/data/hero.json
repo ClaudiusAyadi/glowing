@@ -1,0 +1,25 @@
+{
+	"slides": [
+		{
+			"title": "Reveal The Beauty of Skin",
+			"description": "Made using clean, non-toxic ingredients, our products are designed for everyone.",
+			"src": "/hero/hero-banner-1.jpg",
+			"alt": "Hero Banner 1",
+			"price": "$7.99"
+		},
+		{
+			"src": "/hero/hero-banner-2.jpg",
+			"alt": "Hero Banner 2",
+			"title": "Reveal The Beauty of Skin",
+			"description": "Made using clean, non-toxic ingredients, our products are designed for everyone.",
+			"price": "$50"
+		},
+		{
+			"src": "/hero/hero-banner-3.jpg",
+			"alt": "Hero Banner 3",
+			"title": "Reveal The Beauty of Skin",
+			"description": "Made using clean, non-toxic ingredients, our products are designed for everyone.",
+			"price": "$120"
+		}
+	]
+}

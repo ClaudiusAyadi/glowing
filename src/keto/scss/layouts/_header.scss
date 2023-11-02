@@ -44,7 +44,7 @@
 		bottom: auto;
 		box-shadow: var(--shadow-s);
 		transform: translateY(100%);
-		transition: var(--transition);
+		transition: var(--normal);
 	}
 
 	.container {
@@ -83,7 +83,7 @@
 			--duration: 250ms;
 
 			font-size: var(--space-s);
-			transition: var(--transition);
+			transition: var(--normal);
 
 			&:not(:first-child) {
 				display: none;

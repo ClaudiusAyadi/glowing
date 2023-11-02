@@ -4,7 +4,8 @@
 /*  "container-" Utility Classes */
 @each $container, $value in $containers {
 	.#{$container} {
-		max-inline-size: var(--#{$container});
+		--max: var(--#{$container});
+		max-inline-size: var(--max);
 		inline-size: 100%;
 		margin-inline: auto;
 	}

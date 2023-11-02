@@ -1,12 +1,12 @@
-import LogoPng from "../../assets/images/logo.png";
+import logoPng from "../../assets/images/logo.png";
 
-export default function Logo() {
+function Logo() {
 	return (
 		<figure className="logo-wrapper">
-			<a href="/">
+			<a href="#home">
 				<picture>
 					<img
-						src={LogoPng}
+						src={logoPng}
 						alt="Glowing Inc. logo"
 					/>
 				</picture>
@@ -15,3 +15,5 @@ export default function Logo() {
 		</figure>
 	);
 }
+
+export default Logo;

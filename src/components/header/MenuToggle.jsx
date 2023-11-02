@@ -1,11 +1,13 @@
-export default function MenuToggle({children, label, toggle, onToggle}) {
+function MenuToggle({children, name, label, toggle, onToggle}) {
 	return (
 		<button
-			className="menu-toggle"
+			className={name}
 			aria-label={label}
-			aria-expanded={!toggle ? "false" : "true"}
+			aria-expanded={toggle ? "true" : "false"}
 			onClick={onToggle}>
 			{children}
 		</button>
 	);
 }
+
+export default MenuToggle;

@@ -1,6 +1,6 @@
 @use "../layouts/breakpoints" as *;
 
-[data-keto="main"] {
+[data-keto="content"] {
 	inline-size: 100%;
 	display: block;
 	flex: 1;
@@ -11,7 +11,7 @@
 		margin-block-start: var(--space-4xl);
 	}
 
-	section:not(:first-child) .container {
+	section:not(:first-of-type) .container {
 		padding-block-start: var(--space-4xl);
 	}
 }

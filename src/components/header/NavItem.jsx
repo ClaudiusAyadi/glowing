@@ -1,4 +1,4 @@
-export default function NavItem({label}) {
+function NavItem({label}) {
 	return (
 		<li>
 			<a
@@ -9,3 +9,5 @@ export default function NavItem({label}) {
 		</li>
 	);
 }
+
+export default NavItem;

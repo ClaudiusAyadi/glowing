@@ -1,15 +1,31 @@
 @font-face {
 	font-display: swap;
-	font-family: "Effra";
+	font-family: "Urbanist";
 	font-style: normal;
 	font-weight: 400;
-	src: url("./effra-regular.woff2") format("woff2"), url("./effra-regular.woff") format(".woff");
+	src: url("./urbanist-400.woff2") format("woff2");
 }
 
 @font-face {
 	font-display: swap;
-	font-family: "Effra";
+	font-family: "Urbanist";
+	font-style: normal;
+	font-weight: 500;
+	src: url("./urbanist-500.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Urbanist";
+	font-style: normal;
+	font-weight: 600;
+	src: url("./urbanist-600.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Urbanist";
 	font-style: normal;
 	font-weight: 700;
-	src: url("./effra-bold.woff2") format("woff2"), url("./effra-bold.woff") format("woff");
+	src: url("./urbanist-700.woff2") format("woff2");
 }

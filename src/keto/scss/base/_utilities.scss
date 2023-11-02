@@ -1,5 +1,6 @@
 @use "sass:list";
 @use "../abstracts/functions" as *;
+@use "../base/animations" as *;
 
 /* UTILITY CLASSES */
 
@@ -60,5 +61,41 @@
 		&:hover {
 			scale: -1 -1;
 		}
+	}
+}
+
+.hover-shine {
+	overflow: hidden;
+
+	.bg-img {
+		position: absolute;
+		inset: 0;
+		object-fit: cover;
+		z-index: -1;
+		transition: var(--normal);
+
+		picture {
+			img {
+				object-fit: cover;
+				height: 100%;
+			}
+		}
+	}
+
+	&:is(:hover, :focus) .bg-img {
+		transform: scale(1.15);
+	}
+
+	&::before {
+		inset: 0 0 0 -140%;
+		inline-size: 100%;
+		background-image: var(--gradient);
+		transform: skewX(-25%);
+		transition: var(--normal);
+		z-index: 1;
+	}
+
+	&:is(:hover, :focus-visible)::before {
+		animation: shine 2s ease forwards;
 	}
 }

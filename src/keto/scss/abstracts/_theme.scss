@@ -14,7 +14,7 @@
 	--border: var(--border-width) var(--border-style) var(--border-color);
 	--border-width: 0.2rem;
 	--border-style: solid;
-	--border-color: unset;
+	--border-color: currentColor;
 	--border-radius: var(--radius-s);
 }
 
@@ -32,11 +32,12 @@
 
 %transition {
 	// Site default transition
-	--transition: var(--duration) var(--function);
+	--all: var(--property) var(--duration) var(--function);
+	--normal: var(--duration) var(--function);
 	--property: all;
 	--duration: 500ms;
 	--function: ease;
 	--cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
 	--cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
-	--transition-all: var(--property) var(--duration) var(--function);
+	--cubic-x: cubic-bezier(0.25, 1, 0.5, 1);
 }

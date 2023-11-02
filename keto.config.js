@@ -6,7 +6,7 @@ export default {
 
 	/* Allowed Variables: base-font, alt-font, action-font */
 	fontFamily: {
-		"base-font": "Effra",
+		"base-font": "Urbanist",
 		"alt-font": "Helvetica",
 	},
 

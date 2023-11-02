@@ -1,6 +1,6 @@
 import NavItem from "./NavItem";
 
-export default function Navbar() {
+function Navbar() {
 	return (
 		<nav className="navbar">
 			<ul className="navbar__list">
@@ -13,3 +13,5 @@ export default function Navbar() {
 		</nav>
 	);
 }
+
+export default Navbar;

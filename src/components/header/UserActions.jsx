@@ -1,20 +1,18 @@
-export default function UserActions() {
+import {Icon} from "@iconify/react";
+
+function UserActions() {
 	return (
 		<div className="header__actions">
 			<button
 				className="header__actions-btn"
 				aria-label="User">
-				<span
-					className="iconify"
-					data-icon="ion:person-outline"></span>
+				<Icon icon="ion:person-outline" />
 			</button>
 
 			<button
 				className="header__actions-btn"
 				aria-label="Wishlist">
-				<span
-					className="iconify"
-					data-icon="ion:heart-outline"></span>
+				<Icon icon="ion:heart-outline" />
 				<span className="btn-badge">0</span>
 			</button>
 
@@ -26,11 +24,11 @@ export default function UserActions() {
 					value="0">
 					$0:00
 				</data>
-				<span
-					className="iconify"
-					data-icon="ion:bag-outline"></span>
+				<Icon icon="ion:bag-outline" />
 				<span className="btn-badge">0</span>
 			</button>
 		</div>
 	);
 }
+
+export default UserActions;

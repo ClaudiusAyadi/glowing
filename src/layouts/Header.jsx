@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import {Alert, MenuToggle, Search, Logo, UserActions, Navbar} from "../components/header";
 
-export default function Header() {
+function Header() {
 	const [toggle, setToggle] = useState(false);
 	const [fix, setFix] = useState(false);
 
@@ -32,6 +32,7 @@ export default function Header() {
 				<div className={`${fix ? "header__top scrolling" : "header__top"}`}>
 					<div className="container">
 						<MenuToggle
+							name={"menu-toggle"}
 							label="Open Mobile Menu"
 							toggle={toggle}
 							onToggle={menuToggle}>
@@ -54,6 +55,7 @@ export default function Header() {
 					<div className="wrapper">
 						<Logo />
 						<MenuToggle
+							name={"menu-toggle"}
 							label={"Close Mobile Menu"}
 							toggle={toggle}
 							onToggle={menuToggle}>
@@ -66,10 +68,14 @@ export default function Header() {
 					<Navbar />
 				</div>
 
-				<div
-					className="overlay"
-					aria-expanded={toggle ? "true" : "false"}></div>
+				<MenuToggle
+					name={"overlay"}
+					label={"Mobile Menu Overlay"}
+					toggle={toggle}
+					onToggle={menuToggle}></MenuToggle>
 			</aside>
 		</>
 	);
 }
+
+export default Header;
